@@ -65,13 +65,14 @@ body.dark-mode h6{
 
 /* Navigation Bar */
 .navbar { 
-    width:100%;
+    
     position:fixed;
     top:0px;
-    z-index:15;
+    z-index:5;
     background-color: #ffffff !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
+    width:100%;
 }
 
 .navbar-brand {
@@ -98,7 +99,7 @@ body.dark-mode h6{
     margin-right: 5px;
 }
 .page{
-    z-index:-1;
+    z-index:-5;
 }
 /* Cart count badge */
 .cart-count {
