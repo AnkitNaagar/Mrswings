@@ -67,7 +67,7 @@ body.dark-mode h6{
 .navbar { 
     position:fixed;
     top:0px;
-    z-index:111;
+    z-index:5;
     background-color: #ffffff !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
