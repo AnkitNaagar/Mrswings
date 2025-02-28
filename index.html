@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild Face Apparel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #hero {
+            position: relative;
+            overflow: hidden; /* Hide video overflow */
+            text-align: center; /* Center all text */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            min-height: 500px; /* Adjust as needed */
+        }
+
+        #hero .hero-text {
+            position: relative; /* Above the video */
+            z-index: 2; /* Ensure text is above the video */
+            color: white; /* Make text readable */
+            text-shadow: 2px 2px 4px #000000; /*Optional text shadow for better readability */
+            padding: 20px;
+        }
+
+        #hero video {
+            position: absolute; /* Position behind the text */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the entire area */
+            z-index: 1; /* Place behind the text */
+        }
+
+        .section-title {
+            text-align: center; /* Center all section titles */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/wildface-logo.png" alt="Wild Face Logo" height="30">
+                Wild Face Apparel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#new-arrivals">New Arrivals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#dresses">Dresses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tops">Tops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#accessories">Accessories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">(0)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn btn-outline-secondary"><i class="fas fa-sun"></i></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="container-fluid py-5">
+        <video autoplay muted loop>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="hero-text">
+            <h1>Wild Face Apparel</h1>
+            <p>Discover unique and stylish clothing for the modern woman. Express your individuality with our curated collection.</p>
+            <a href="#new-arrivals" class="btn btn-primary">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section id="new-arrivals" class="container py-5">
+        <h2 class="section-title">New Arrivals</h2>
+        <div class="section-slider">
+            <div class="slider-wrapper">
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHx8" alt="New Arrival 1">
+                    <div class="slide-content">
+                        <h3>Boho Chic Dress</h3>
+                        <p>Flowing and free-spirited, perfect for summer days.</p>
+                        <p class="price">$79.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-name="Boho Chic Dress" data-price="79.99" data-image="images/new-arrival-1.jpg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://media.istockphoto.com/id/1475857190/photo/serie-of-studio-photos-of-young-female-model-in-pine-green-silk-blouse-and-relaxed-jeans.jpg?s=612x612&w=0&k=20&c=ADvATf13x-V4J5JUfG9Jgh575lMrCRMHXpvzvUNFMW0=" alt="New Arrival 4">
+                    <div class="slide-content">
+                        <h3>Elegant Silk Top</h3>
+                        <p>Sophisticated and versatile, ideal for any occasion.</p>
+                        <p class="price">$59.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-name="Elegant Silk Top" data-price="59.99" data-image="images/new-arrival-4.jpg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://plus.unsplash.com/premium_photo-1665664652383-2308d742943c?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="New Arrival 7">
+                    <div class="slide-content">
+                        <h3>High-Waisted Jeans</h3>
+                        <p>A classic wardrobe staple with a modern twist.</p>
+                        <p class="price">$89.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-name="High-Waisted Jeans" data-price="89.99" data-image="images/new-arrival-7.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <!-- Load More Button -->
+        <div class="load-more-container">
+            <a href="arrivals.html" class="btn btn-primary">Load More..</a>
+        </div>
+    </section>
+
+    <!-- Dresses Section -->
+    <section id="dresses" class="container py-5">
+        <h2 class="section-title">Dresses</h2>
+        <div class="section-slider">
+            <div class="slider-wrapper">
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U3VtbWVyJTIwTWF4aSUyMERyZXNzfGVufDB8fDB8fHww" alt="Dress 1">
+                    <div class="slide-content">
+                        <h3>Summer Maxi Dress</h3>
+                        <p>Lightweight and comfortable for warm weather.</p>
+                        <p class="price">$69.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-name="Summer Maxi Dress" data-price="69.99" data-image="images/dress-1.jpg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1699729589505-d1791e32d925?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fEV2ZW5pbmclMjBDb2NrdGFpbCUyMERyZXNzfGVufDB8fDB8fHww" alt="Dress 4">
+                    <div class="slide-content">
+                        <h3>Evening Cocktail Dress</h3>
+                        <p>Elegant and sophisticated for special events.</p>
+                        <p class="price">$129.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-name="Evening Cocktail Dress" data-price="129.99" data-image="images/dress-4.jpg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1592327877233-90b9bfd92e48?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dress 7">
+                    <div class="slide-content">
+                        <h3>Casual Day Dress</h3>
+                        <p>Versatile and stylish for everyday wear.</p>
+                        <p class="price">$49.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-name="Casual Day Dress" data-price="49.99" data-image="images/dress-7.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+         <!-- Load More Button -->
+         <div class="load-more-container">
+            <a href="dresses.html" class="btn btn-primary">Load More..</a>
+        </div>
+    </section>
+
+    <!-- Tops Section -->
+    <section id="tops" class="container py-5">
+        <h2 class="section-title">Tops</h2>
+        <div class="section-slider">
+            <div class="slider-wrapper">
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1607032051915-c42d888e0a95?q=80&w=1911&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Top 1">
+                    <div class="slide-content">
+                        <h3>Linen Blouse</h3>
+                        <p>Breathable and stylish for summer.</p>
+                        <p class="price">$49.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-name="Linen Blouse" data-price="49.99" data-image="images/top-1.jpg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1614792568992-ded1c487c1dd?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Top 4">
+                    <div class="slide-content">
+                        <h3>Knitted Tank Top</h3>
+                        <p>Comfortable and trendy for casual days.</p>
+                        <p class="price">$39.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-name="Knitted Tank Top" data-price="39.99" data-image="images/top-4.jpg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1645736531312-398350b86455?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzZ8fHN3ZWF0ZXIlMjBtb2NrdXB8ZW58MHx8MHx8fDA%3D" alt="Top 7">
+                    <div class="slide-content">
+                        <h3>Cropped Sweater</h3>
+                        <p>Perfect for layering in cooler weather.</p>
+                        <p class="price">$69.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-name="Cropped Sweater" data-price="69.99" data-image="images/top-7.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+         <!-- Load More Button -->
+         <div class="load-more-container">
+            <a href="tops.html" class="btn btn-primary">Load More..</a>
+        </div>
+    </section>
+
+    <!-- Accessories Section -->
+    <section id="accessories" class="container py-5">
+        <h2 class="section-title">Accessories</h2>
+        <div class="section-slider">
+            <div class="slider-wrapper">
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1613482184972-f9c1022d0928?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bGVhdGhlciUyMGJhZ3xlbnwwfHwwfHx8MA%3D%3D" alt="Accessory 1">
+                    <div class="slide-content">
+                        <h3>Leather Handbag</h3>
+                        <p>A stylish and functional accessory.</p>
+                        <p class="price">$99.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-name="Leather Handbag" data-price="99.99" data-image="images/accessory-1.jpg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://plus.unsplash.com/premium_photo-1674719144061-09f53cd3c7b8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fFNpbGslMjBTY2FyZnxlbnwwfHwwfHx8MA%3D%3D" alt="Accessory 4">
+                    <div class="slide-content">
+                        <h3>Silk Scarf</h3>
+                        <p>Add a touch of elegance to any outfit.</p>
+                        <p class="price">$29.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-name="Silk Scarf" data-price="29.99" data-image="images/accessory-4.jpg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1727947310763-db5d85bd940c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjI3fHxzdGF0bWVudCUyMG5lY2tsYWNlfGVufDB8fDB8fHww" alt="Accessory 7">
+                    <div class="slide-content">
+                        <h3>Statement Necklace</h3>
+                        <p>A bold accessory to complete your look.</p>
+                        <p class="price">$79.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-name="Statement Necklace" data-price="79.99" data-image="images/accessory-7.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+             <div class="slider-nav">
+                <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+      
+         <!-- Load More Button -->
+         <div class="load-more-container">
+            <a href="accessories.html" class="btn btn-primary">Load More..</a>
+        </div>
+    </section>
+
+    <!-- More Image Sections -->
+    <section id="featured" class="container py-5">
+        <h2 class="section-title">Featured Items</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="featured-item">
+                    <img src="https://images.unsplash.com/photo-1545686404-df14b24cbe8f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA4fHxkZW5pbSUyMGphY2tldHxlbnwwfHwwfHx8MA%3D%3D" alt="Featured Item 1" class="img-fluid">
+                    <h3>Embroidered Denim Jacket</h3>
+                    <p>A unique and stylish denim jacket.</p>
+                    <p class="price">$119.99</p>
+                    <button class="btn btn-secondary add-to-cart" data-name="Embroidered Denim Jacket" data-price="119.99" data-image="images/featured-1.jpg">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="featured-item">
+                    <img src="https://images.unsplash.com/photo-1693990156026-c2ce3c1694f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fFdpZGUlMjBMZWclMjBUcm91c2VycyUyMGxhZGllc3xlbnwwfHwwfHx8MA%3D%3D" alt="Featured Item 2" class="img-fluid">
+                    <h3>Wide-Leg Trousers</h3>
+                    <p>Comfortable and fashionable wide-leg trousers.</p>
+                    <p class="price">$69.99</p>
+                    <button class="btn btn-secondary add-to-cart" data-name="Wide-Leg Trousers" data-price="69.99" data-image="images/featured-2.jpg">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sale" class="container py-5">
+        <h2 class="section-title">Sale Items</h2>
+         <div class="section-slider">
+            <div class="slider-wrapper">
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1738651875581-b0b8454ca3d2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fFN0cmlwZWQlMjBUJTIwU2hpcnQlMjBsYWRpZXN8ZW58MHx8MHx8fDA%3D" alt="Sale Item 1">
+                    <div class="slide-content">
+                        <h3>Striped T-Shirt</h3>
+                        <p>A classic striped t-shirt on sale.</p>
+                        <p class="price"><span class="original-price">$29.99</span> <span class="sale-price">$19.99</span></p>
+                        <button class="btn btn-secondary add-to-cart" data-name="Striped T-Shirt" data-price="19.99" data-image="images/sale-1.jpg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="slide"><img src="https://images.unsplash.com/photo-1507274301514-7de9f124ff54?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QSUyMGJlYXV0aWZ1bCUyMGZsb3JhbCUyMHNraXJ0fGVufDB8fDB8fHww" alt="Sale Item 4">
+                    
+                    <div class="slide-content">
+                        <h3>Floral Skirt</h3>
+                        <p>A beautiful floral skirt on sale.</p>
+                        <p class="price"><span class="original-price">$49.99</span> <span class="sale-price">$34.99</span></p>
+                        <button class="btn btn-secondary add-to-cart" data-name="Floral Skirt" data-price="34.99" data-image="images/sale-4.jpg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1654684198148-c192c37f9b0d?q=80&w=1873&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sale Item 7">
+                    <div class="slide-content">
+                        <h3>Ankle Boots</h3>
+                        <p>Stylish ankle boots on sale.</p>
+                        <p class="price"><span class="original-price">$99.99</span> <span class="sale-price">$69.99</span></p>
+                        <button class="btn btn-secondary add-to-cart" data-name="Ankle Boots" data-price="69.99" data-image="images/sale-7.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container py-5">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Get in touch with us to inquire about our products or for any assistance.</p>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h3>Our Location</h3>
+                <p>123 Fashion Street, Cityville</p>
+                <p>Phone: (555) 123-4567</p>
+                <p>Email: info@wildfaceapparel.com</p>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="btn btn-secondary"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <p>© 2024 Wild Face Apparel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+    <!-- Custom JavaScript (script.js) -->
+    <script src="script.js"></script>
+
+</body>
+</html>

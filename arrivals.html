@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Arrivals - Wild Face Apparel</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Basic styling for the container and items */
+        .product-container {
+            margin: 20px;
+        }
+
+        .product-card {
+            margin-bottom: 20px; /* Add spacing below each card */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .card-text {
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        .price {
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .add-to-cart {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+
+        .add-to-cart:hover {
+            background-color: #0056b3;
+        }
+
+        /* Masonry-specific styling (optional) */
+        .product-container {
+            width: 90%; /* Adjust as needed */
+            margin: 20px auto; /* Center the container */
+        }
+
+        .product-card {
+            width: 250px; /* Adjust card width */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .product-container {
+                width: 95%;
+            }
+            .product-card {
+                width: 45%;  /* Two columns on smaller screens if desired */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .product-card {
+                width: 100%; /* Single column on very small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar (Same as your main page) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/wildface-logo.png" alt="Wild Face Logo" height="30">
+                Wild Face Apparel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html#new_arrivals">New Arrivals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#dresses">Dresses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#tops">Tops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#accessories">Accessories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">(0)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn btn-outline-secondary"><i class="fas fa-sun"></i></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <h1 class="text-center mb-4">More New Arrivals</h1>
+
+        <div class="product-container">
+            <!-- Product Listing 1 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1738651875581-b0b8454ca3d2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fFN0cmlwZWQlMjBUJTIwU2hpcnQlMjBsYWRpZXN8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="New Arrival 4">
+                <div class="card-body">
+                    <h5 class="card-title">Striped Linen Shirt</h5>
+                    <p class="card-text">Lightweight and breezy, perfect for summer.</p>
+                    <p class="price">$49.99</p>
+                    <a href="#" class="btn btn-secondary add-to-cart" data-name="Striped Linen Shirt" data-price="49.99" data-image="images/new-arrival-4.jpg">Add to Cart</a>
+                </div>
+            </div>
+
+            <!-- Product Listing 2 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1507274301514-7de9f124ff54?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QSUyMGJlYXV0aWZ1bCUyMGZsb3JhbCUyMHNraXJ0fGVufDB8fDB8fHww" class="card-img-top" alt="New Arrival 5">
+                <div class="card-body">
+                    <h5 class="card-title">Pleated Midi Skirt</h5>
+                    <p class="card-text">A versatile skirt for any occasion.</p>
+                    <p class="price">$69.99</p>
+                    <a href="#" class="btn btn-secondary add-to-cart" data-name="Pleated Midi Skirt" data-price="69.99" data-image="images/new-arrival-5.jpg">Add to Cart</a>
+                </div>
+            </div>
+
+            <!-- Product Listing 3 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1654684198148-c192c37f9b0d?q=80&w=1873&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="New Arrival 6">
+                <div class="card-body">
+                    <h5 class="card-title">Leather Ankle Boots</h5>
+                    <p class="card-text">Stylish and comfortable ankle boots.</p>
+                    <p class="price">$99.99</p>
+                    <a href="#" class="btn btn-secondary add-to-cart" data-name="Leather Ankle Boots" data-price="99.99" data-image="images/new-arrival-6.jpg">Add to Cart</a>
+                </div>
+            </div>
+
+            <!-- More product listings here -->
+            <!-- Product Listing 4 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1738651875581-b0b8454ca3d2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fFN0cmlwZWQlMjBUJTIwU2hpcnQlMjBsYWRpZXN8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="New Arrival 4">
+                <div class="card-body">
+                    <h5 class="card-title">Striped Linen Shirt</h5>
+                    <p class="card-text">Lightweight and breezy, perfect for summer.</p>
+                    <p class="price">$49.99</p>
+                    <a href="#" class="btn btn-secondary add-to-cart" data-name="Striped Linen Shirt" data-price="49.99" data-image="images/new-arrival-4.jpg">Add to Cart</a>
+                </div>
+            </div>
+
+            <!-- Product Listing 5 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1585432890734-09d29d0e1f14?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHdvbWVuJTIwZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="New Arrival 5">
+                <div class="card-body">
+                    <h5 class="card-title">Pleated Midi Skirt</h5>
+                    <p class="card-text">A versatile skirt for any occasion.</p>
+                    <p class="price">$69.99</p>
+                    <a href="#" class="btn btn-secondary add-to-cart" data-name="Pleated Midi Skirt" data-price="69.99" data-image="images/new-arrival-5.jpg">Add to Cart</a>
+                </div>
+            </div>
+
+            <!-- Product Listing 6 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1654684198148-c192c37f9b0d?q=80&w=1873&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="New Arrival 6">
+                <div class="card-body">
+                    <h5 class="card-title">Leather Ankle Boots</h5>
+                    <p class="card-text">Stylish and comfortable ankle boots.</p>
+                    <p class="price">$99.99</p>
+                    <a href="#" class="btn btn-secondary add-to-cart" data-name="Leather Ankle Boots" data-price="99.99" data-image="images/new-arrival-6.jpg">Add to Cart</a>
+                </div>
+            </div>
+
+             <!-- Product Listing 7 -->
+             <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1738651875581-b0b8454ca3d2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fFN0cmlwZWQlMjBUJTIwU2hpcnQlMjBUJTIwU2hpcnQlMjBsYWRpZXN8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="New Arrival 4">
+                <div class="card-body">
+                    <h5 class="card-title">Striped Linen Shirt</h5>
+                    <p class="card-text">Lightweight and breezy, perfect for summer.</p>
+                    <p class="price">$49.99</p>
+                    <a href="#" class="btn btn-secondary add-to-cart" data-name="Striped Linen Shirt" data-price="49.99" data-image="images/new-arrival-4.jpg">Add to Cart</a>
+                </div>
+            </div>
+
+            <!-- Product Listing 8 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1507274301514-7de9f124ff54?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QSUyMGJlYXV0aWZ1bCUyMGZsb3JhbCUyMHNraXJ0fGVufDB8fDB8fHww" class="card-img-top" alt="New Arrival 5">
+                <div class="card-body">
+                    <h5 class="card-title">Pleated Midi Skirt</h5>
+                    <p class="card-text">A versatile skirt for any occasion.</p>
+                    <p class="price">$69.99</p>
+                    <a href="#" class="btn btn-secondary add-to-cart" data-name="Pleated Midi Skirt" data-price="69.99" data-image="images/new-arrival-5.jpg">Add to Cart</a>
+                </div>
+            </div>
+
+            <!-- Product Listing 9 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1654684198148-c192c37f9b0d?q=80&w=1873&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="New Arrival 6">
+                <div class="card-body">
+                    <h5 class="card-title">Leather Ankle Boots</h5>
+                    <p class="card-text">Stylish and comfortable ankle boots.</p>
+                    <p class="price">$99.99</p>
+                    <a href="#" class="btn btn-secondary add-to-cart" data-name="Leather Ankle Boots" data-price="99.99" data-image="images/new-arrival-6.jpg">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Home Button -->
+    <div class="container text-center mt-3">
+        <a href="index.html" class="btn btn-primary">Back to Home</a>
+    </div>
+
+     <!-- Footer -->
+     <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <p>© 2024 Wild Face Apparel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Masonry Library (Include before your script.js) -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+   <!-- Custom JavaScript (script.js) -->
+   <script src="script.js"></script>
+    <script>
+        // Initialize Masonry after the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            var elem = document.querySelector('.product-container');
+            var msnry = new Masonry( elem, {
+                // options
+                itemSelector: '.product-card',
+                columnWidth: 250,  // Adjust this to match your card width
+                gutter: 20,        // Adjust this to match your card margin
+                percentPosition: true
+            });
+        });
+    </script>
+</body>
+</html>

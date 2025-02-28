@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Wild Face Apparel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    
+    .pinterest-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 15px;
+        padding: 15px;
+    }
+    
+    .pinterest-grid .card {
+        display: flex;
+        flex-direction: column;
+        border: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .pinterest-grid .card img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+    
+    .pinterest-grid .card .card-body {
+        padding: 15px;
+    }
+    
+    .pinterest-grid .card .card-title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .pinterest-grid .card .card-text {
+        font-size: 0.875rem;
+        color: #555;
+    }
+    
+    .pinterest-grid .card .price {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-top: 0.5rem;
+    }
+    
+    .pinterest-grid .card .btn {
+        margin-top: auto;
+        width: 100%;
+        border-radius: 0;
+        border-top: 1px solid #eee;
+        padding: 0.75rem;
+        font-size: 0.875rem;
+    }
+    
+    @media (max-width: 576px) {
+        .pinterest-grid {
+            grid-template-columns: 1fr;
+        }
+    }</style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/wildface-logo.png" alt="Wild Face Logo" height="30">
+                Wild Face Apparel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#new-arrivals">New Arrivals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#dresses">Dresses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#tops">Tops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#accessories">Accessories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart <span
+                                class="cart-count">(0)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn btn-outline-secondary"><i class="fas fa-sun"></i></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Section -->
+    <section id="cart" class="container py-5">
+        <h2 class="section-title">Shopping Cart</h2>
+        <div id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+            <p>Your cart is empty.</p>
+        </div>
+        <div id="cart-total">
+            <strong>Total: $0.00</strong>
+        </div>
+        <button class="btn btn-primary" id="checkout-button">Checkout</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center ">
+            <p>© 2024 Wild Face Apparel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
